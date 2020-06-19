@@ -1,0 +1,28 @@
+EXAMPLE USAGE:
+=====================================================================
+
+sudo docker run -v "$(pwd)"/test:/home/appuser/test -it jk32knight/sspro:5.2 run_SCRATCH-1D_predictors.sh test/test.fasta test/out_test 4
+
+
+
+===================================================================
+EXPECTED:
+====================================================================
+
+
+###################################
+#                                 #
+#  SCRATCH-1D release 1.2 (2018)  #
+#                                 #
+###################################
+
+[SCRATCH-1D_predictions.pl] 1 protein sequence(s) found
+[SCRATCH-1D_predictions.pl] generating sequence profiles...
+[SCRATCH-1D_predictions.pl] running SCRATCH-1D predictors...
+[SCRATCH-1D_predictions.pl] running homology analysis...
+[SCRATCH-1D_predictions.pl] writing SSpro predictions...
+[SCRATCH-1D_predictions.pl] writing SSpro8 predictions...
+[SCRATCH-1D_predictions.pl] writing ACCpro predictions...
+[SCRATCH-1D_predictions.pl] writing ACCpro20 predictions...
+[SCRATCH-1D_predictions.pl] job successfully completed!
+
