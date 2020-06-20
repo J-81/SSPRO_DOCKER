@@ -1,7 +1,14 @@
 EXAMPLE USAGE:
 =====================================================================
+docker run -it -u $(id -u):$(id -g) \
+	-v /scratch/uniref50:/usr/local/SCRATCH-1D_1.2/pkg/PROFILpro_1.2/data/uniref50 \
+	-v "$(pwd)"/{LOCAL_DATA_FOLDER}:/home/appuser/test \
+	jk32knight/sspro:5.2 \
+	test/{INPUT_FILE} test/{OUTPUT_FILE_PREFIX} {NUM_CPU}
 
-sudo docker run -v "$(pwd)"/test:/home/appuser/test -it jk32knight/sspro:5.2 run_SCRATCH-1D_predictors.sh test/test.fasta test/out_test 4
+
+
+docker run -it -u $(id -u):$(id -g) -v /scratch/uniref50:/usr/local/SCRATCH-1D_1.2/pkg/PROFILpro_1.2/data/uniref50 -v "$(pwd)"/nrtest:/home/appuser/test  jk32knight/sspro:5.2 test/test.fasta test/out_nonroot 4
 
 
 
